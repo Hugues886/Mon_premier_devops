@@ -2,76 +2,19 @@
 <html>
 <head>
     <title>Serveur de Hugues</title>
-    <style>
-        body {
-            background-color: #2c3e50;
-            color: white;
-            font-family: sans-serif;
-            text-align: center;
-            padding-top: 50px;
-        }
-        .carte {
-            background-color: #34495e;
-            padding: 20px;
-            border-radius: 15px;
-            display: inline-block;
-            border: 2px solid #3498db;
-            transition: 0.5s; /* Pour une animation fluide */
-        }
-        h1 { color: #3498db; }
-        
-        /* Le style du nouveau bouton */
-        button {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="carte" id="maCarte">
         <h1>Hugues Cloud Server</h1>
         <p>Statut : <strong id="statut">En ligne</strong></p>
         <p>Localisation : Termux / Kinshasa</p>
-        <p>Derniere connexion: <span id="horloge">En attente...</span></p>
-        
-        <button onclick="activerMagie()">Activer la Magie !</button>
-        <button onclick="changerMode()" style="background-color: #7f8c8d;">Changer de Mode</button>
+        <p>Derniere connexion: <span id="horloge"></span></p>
+
+        <button onclick="activerMagie()">Activer</button>
+        <button onclick="changerMode()" style="background-color: ..."></button>
     </div>
 
-    <script>
-        function activerMagie() {
-            // On change la bordure de la carte en vert
-            document.getElementById('maCarte').style.borderColor = '#2ecc71';
-            
-            // On modifie le texte du statut
-            document.getElementById('statut').innerHTML = 'Super Puissance Activée ⚡';
-            document.getElementById('statut').style.color = '#2ecc71';
-            document.getElementById('horloge').innerHTML = new Date().toLocaleTimeString();
-
-            
-            // On affiche une fenêtre pop-up
-            alert("Bienvenue dans le monde de JavaScript, Le serveur de Hugues est puissant.");
-        }
-        function changerMode() {
-    // On récupère le corps de la page (le body)
-    let corps = document.body;
-    
-    // Si la couleur est bleu foncé, on passe au blanc, sinon on revient au bleu
-    if (corps.style.backgroundColor === "rgb(44, 62, 80)") {
-        corps.style.backgroundColor = "#ecf0f1";
-        corps.style.color = "#2c3e50";
-    } else {
-        corps.style.backgroundColor = "#2c3e50";
-        corps.style.color = "white";
-    }
-}
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
