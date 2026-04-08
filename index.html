@@ -41,6 +41,7 @@
         <p>Derniere connexion: <span id="horloge">En attente...</span></p>
         
         <button onclick="activerMagie()">Activer la Magie !</button>
+        <button onclick="changerMode()" style="background-color: #7f8c8d;">Changer de Mode</button>
     </div>
 
     <script>
@@ -57,6 +58,20 @@
             // On affiche une fenêtre pop-up
             alert("Bienvenue dans le monde de JavaScript, Le serveur de Hugues est puissant.");
         }
+        function changerMode() {
+    // On récupère le corps de la page (le body)
+    let corps = document.body;
+    
+    // Si la couleur est bleu foncé, on passe au blanc, sinon on revient au bleu
+    if (corps.style.backgroundColor === "rgb(44, 62, 80)") {
+        corps.style.backgroundColor = "#ecf0f1";
+        corps.style.color = "#2c3e50";
+    } else {
+        corps.style.backgroundColor = "#2c3e50";
+        corps.style.color = "white";
+    }
+}
+
     </script>
 </body>
 </html>
