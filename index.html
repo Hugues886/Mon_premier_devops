@@ -38,6 +38,7 @@
         <h1>Hugues Cloud Server</h1>
         <p>Statut : <strong id="statut">En ligne</strong></p>
         <p>Localisation : Termux / Kinshasa</p>
+        <p>Derniere connexion: <span id="horloge">En attente...</span></p>
         
         <button onclick="activerMagie()">Activer la Magie !</button>
     </div>
@@ -50,6 +51,8 @@
             // On modifie le texte du statut
             document.getElementById('statut').innerHTML = 'Super Puissance Activée ⚡';
             document.getElementById('statut').style.color = '#2ecc71';
+            document.getElementById('horloge').innerHTML = new Date().toLocaleTimeString();
+
             
             // On affiche une fenêtre pop-up
             alert("Bienvenue dans le monde de JavaScript, Le serveur de Hugues est puissant.");
